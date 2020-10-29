@@ -8,15 +8,47 @@
 <body>
     
     <script>
-        function computerPlay(Rock, Paper,Scissors)
-        {
+        let userPoint=0
+        let computerSelection = computerPlay();
+        let enterOption = prompt("Enter your choice: (rock,paper or Scissor))")
+            enterOption.toUpperCase();
 
+        function computerPlay()
+        {
+            //Rock, Paper,Scissors
+            let computerSelection = Math.random()
+
+            if(computerSelection > 0.33)
+            {
+                computerSelection = "ROCK"
+            }
+            else if (computerSelection >0.66)
+            {
+                computerSelection = "PAPER"
+            }
+            else
+            {
+                computerSelection ="SCISSOR"
+            }
         }
 
-        function playRound(playSelection,computerSelection)
+        function playRound(playerSelection,computerSelection)
         {
+            switch(playerSelection)
+            {
+                case "ROCK": 
+                    if(computerSelection === "scissor")
+                    {
+                        return 
+                    }
+            }
             
         }
+
+        const playSelection = enterOption;
+        const computerSelection = computerPlay();
+        console.log(playRound(playSelection,computerSelection));
+
     </script>
 </body>
 </html>
