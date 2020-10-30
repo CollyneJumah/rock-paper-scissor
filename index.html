@@ -6,7 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    
     <script>
         let userPoint=0
         let computerSelection = computerPlay();
@@ -39,15 +38,45 @@
                 case "ROCK": 
                     if(computerSelection === "scissor")
                     {
-                        return 
+                        return "you Win,coz rock beats Scissor"
                     }
+                    else
+                        {
+                            return "You lose, paper covers rocks"
+                        }
+                    break;
+                //user select paper
+                case "PAPER":
+                    if(computerSelection === "rock")
+                        {
+                            return "you Win coz paper beats rocks"
+                        }
+                        else
+                        {
+                            return "You lose, coz Scissor beats paper"
+                        }
+                        break
+                case "SCISSOR":
+                        if(computerSelection === 'paper')
+                        {
+                            return "you Win. coz Scissor cuts paper"
+                        }
+                        else 
+                           {
+                               return "you lose coz rock beats scissor"
+                           }
+                        break
+
+                default:
+                       return 'You dint paly it well.'   
+                       break
             }
             
         }
 
         const playSelection = enterOption;
         const computerSelection = computerPlay();
-        console.log(playRound(playSelection,computerSelection));
+        console.log(playRound(playerSelection,computerSelection));
 
     </script>
 </body>
